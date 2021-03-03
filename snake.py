@@ -30,6 +30,7 @@ dis_y = 600
 pygame.init()
 screen = pygame.display.set_mode((dis_x, dis_y))
 pygame.display.set_caption('Snake, Contador: 0')
+
 font_style = pygame.font.SysFont(None, 50)
 
 snake_skin = pygame.Surface((10, 10))
