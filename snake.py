@@ -3,6 +3,11 @@ from pygame import display
 from pygame import font
 from pygame.locals import *
 
+ 
+def message(msg,color):
+    mesg = font_style.render(msg, True, color)
+    screen.blit(mesg, [dis_y/2, dis_x/2])
+
 
 def on_grip_random():
     x = random.randint(10, 590)
@@ -25,6 +30,7 @@ dis_y = 600
 pygame.init()
 screen = pygame.display.set_mode((dis_x, dis_y))
 pygame.display.set_caption('Snake, Contador: 0')
+font_style = pygame.font.SysFont(None, 50)
 
 snake_skin = pygame.Surface((10, 10))
 snake_skin.fill((255,255,255))
@@ -100,5 +106,7 @@ while not game_over:
         screen.blit(snake_skin, pos)
     pygame.display.update()
 
+message("Game Over",(255,255,255))
+pygame.display.update()
 time.sleep(1)
 pygame.quit()
