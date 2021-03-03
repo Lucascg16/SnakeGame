@@ -41,7 +41,7 @@ clock = pygame.time.Clock()
 
 cont = int(3)
 while not game_over:
-    clock.tick(20)
+    clock.tick(15)
 
     for event in pygame.event.get():
         if event.type == QUIT:
