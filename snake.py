@@ -57,24 +57,24 @@ while not game_over:
 
         if event.type == KEYDOWN:
             if my_direction == UP:
-                if event.key == K_a:
+                if event.key == K_a or event.key == K_LEFT:
                     my_direction = LEFT
-                if event.key == K_d:
+                if event.key == K_d or event.key == K_RIGHT:
                     my_direction = RIGHT
             if my_direction == DOWN:
-                if event.key == K_a:
+                if event.key == K_a or event.key == K_LEFT:
                     my_direction = LEFT
-                if event.key == K_d:
+                if event.key == K_d or event.key == K_RIGHT:
                     my_direction = RIGHT
             if my_direction == RIGHT:
-                if event.key == K_w:
+                if event.key == K_w or event.key == K_UP:
                     my_direction = UP
-                if event.key == K_s:
+                if event.key == K_s or event.key == K_DOWN:
                     my_direction = DOWN
             if my_direction == LEFT:
-                if event.key == K_w:
+                if event.key == K_w or event.key == K_UP:
                     my_direction = UP
-                if event.key == K_s:
+                if event.key == K_s or event.key == K_DOWN:
                     my_direction = DOWN
 
 
