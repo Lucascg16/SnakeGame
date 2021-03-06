@@ -44,6 +44,7 @@ apple.fill((255,0,0))
 my_direction = RIGHT
 
 game_over = False
+
 clock = pygame.time.Clock()
 
 cont = int(3)
