@@ -82,7 +82,7 @@ while not game_over:
         apple_pos = on_grip_random()
         snake.append((0,0))
         cont += 1
-        pygame.display.set_caption(f'Snake, Contador: {cont}')
+        pygame.display.set_caption(f'Snake, Contador: {cont - 3}')
         winsound.Beep(2000,10)
         
 
