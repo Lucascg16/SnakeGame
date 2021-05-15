@@ -10,7 +10,7 @@ def message(msg,color):
 
 
 def on_grip_random():
-    x = random.randint(10, 590)
+    x = random.randint(10, 790)
     y = random.randint(10, 590)
     return(x//10 * 10, y//10 * 10)
 
