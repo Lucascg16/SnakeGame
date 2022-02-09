@@ -101,6 +101,10 @@ while not game_over:
     if snake[0][0] >= dis_x or snake[0][0] < 0 or snake[0][1] >= dis_y or snake[0][1] < 0:
         game_over = True
     
+    for i in range(3, len(snake)):
+        if snake[0] == snake[i]:
+            game_over = True
+
     screen.fill((0,0,0))
     screen.blit(apple, apple_pos)
 
