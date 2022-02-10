@@ -4,9 +4,9 @@ from pygame import font
 from pygame.locals import *
 
  
-def message(msg,color):
+def message(msg,color, position):
     mesg = font_style.render(msg, True, color)
-    screen.blit(mesg, [dis_y/2, dis_x/2])
+    screen.blit(mesg, position)
 
 
 def on_grip_random():
@@ -34,7 +34,7 @@ pygame.display.set_caption('Snake, Contador: 0')
 font_style = pygame.font.SysFont(None, 50)
 
 snake_skin = pygame.Surface((10, 10))
-snake_skin.fill((255,255,255))
+snake_skin.fill((0,255,0))
 snake = [(200, 200), (210, 200), (220, 200)]
 
 apple_pos = on_grip_random()
@@ -112,7 +112,9 @@ while not game_over:
         screen.blit(snake_skin, pos)
     pygame.display.update()
 
-message("Game Over",(255,255,255))
+pontuação = str(cont - 3)
+message("Game Over",(255,255,255), [dis_y/2, dis_x/2])
+message("pontuação: " + pontuação,(255,255,255), [dis_y/2.1, dis_x/1.8])
 pygame.display.update()
 time.sleep(1)
 pygame.quit()
