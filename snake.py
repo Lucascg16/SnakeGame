@@ -48,7 +48,7 @@ apple = pygame.Surface((10,10))
 apple.fill((255,0,0))
 
 #Direção que o jogo vai começar
-my_direction = RIGHT
+my_direction = random.randint(0, 3)
 
 #Clock usado para limitar a velocidade da cobra
 clock = pygame.time.Clock()
