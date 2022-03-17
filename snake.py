@@ -54,7 +54,7 @@ my_direction = random.randint(0, 3)
 clock = pygame.time.Clock()
 
 #Contador de pontuação
-cont = int(3)
+cont = int(0)
 
 game_over = False
 while not game_over:
@@ -92,7 +92,7 @@ while not game_over:
         apple_pos = on_grip_random()
         snake.append((0,0))
         cont += 1
-        pygame.display.set_caption(f'Snake, Contador: {cont - 3}')
+        pygame.display.set_caption(f'Snake, Contador: {cont}')
         winsound.Beep(2000,10)
         
 
@@ -125,7 +125,7 @@ while not game_over:
         screen.blit(snake_skin, pos)
     pygame.display.update()
 
-pontuação = str(cont - 3)
+pontuação = str(cont)
 message("Game Over",(255,255,255), [dis_y/2, dis_x/2])
 message("pontuação: " + pontuação,(255,255,255), [dis_y/2.1, dis_x/1.8])
 pygame.display.update()
